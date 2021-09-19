@@ -15,11 +15,14 @@ class Solution:
                 if not len(stack):
                     break
 
-                # 이전과의 차이만큼 물 높이 처리
+                # 이전과의 차이만큼 물 높이 처리^
                 distance = i - stack[-1] - 1
                 waters = min(height[i], height[stack[-1]]) - height[top]
 
                 volume += distance * waters
+                print('height[i]:{} height[stack[-1]]:{}'.format(height[i], height[stack[-1]]))
+                print('i:{}, height[i]:{} top{}, distance:{}, waters:{}, volume:{}'.format(i, height[i], top, distance, waters, volume))
 
             stack.append(i)
+            print('i:{}'.format(i))
         return volume

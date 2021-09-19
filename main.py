@@ -1,5 +1,39 @@
-def main():
-    menu = 7
+def main_c4_non_linear_data_structures():
+    menu = 1
+
+    if menu == 1:  # 125 https://leetcode.com/problems/number-of-islands/
+        in_str = "abc fef cba"
+
+        from c4_non_linear_data_structures.ch12.c32_1 import Solution
+        sol = Solution()
+        print(sol.numIslands(in_str))
+
+
+def main_c3_linear_data_structures():
+    menu = 2
+
+    if menu == 1:  # 1 https://leetcode.com/problems/two-sum/
+        from c3_linear_data_structures.ch07.c7_1 import Solution
+        nums = [9,2,7,11,15]
+        target = 9
+        sol = Solution()
+        print(sol.twoSum(nums,target))
+
+    if menu == 2:  # 15 https://leetcode.com/problems/trapping-rain-water/
+        from c3_linear_data_structures.ch07.c8_2 import Solution
+        heights = [0,1,0,2,1,0,1,3,2,1,2,1]
+        sol = Solution()
+        print(sol.trap(heights))
+
+
+    if menu == 3:  # 15 https://leetcode.com/problems/3sum/
+        from c3_linear_data_structures.ch07.c9_1 import Solution
+        nums = [-1,0,1,2,-1,-4]
+        sol = Solution()
+        print(sol.threeSum(nums))
+
+def main_c2_python():
+    menu = 8
 
     if menu == 1:  # 125 https://leetcode.com/problems/valid-palindrome/
         in_str = "abc fef cba"
@@ -59,14 +93,28 @@ def main():
 
 
     if menu == 7:  # 1 https://leetcode.com/problems/two-sum/
-        nums = [1,7,2,15]
+        nums = [1,10,6,7,18,5,2]
         target = 9
 
-        from c3_linear_data_structures.ch07.c7_1 import Solution
+        from c3_linear_data_structures.ch07.c7_0 import Solution
         sol = Solution()
         print(sol.twoSum(nums, target))
 
+    if menu == 8:  # 42. Trapping Rain Water https://leetcode.com/problems/trapping-rain-water/
+        height = [0,1,0,2,1,0,1,3,2,1,2,1]
+
+        from c3_linear_data_structures.ch07.c8_0 import Solution
+        sol = Solution()
+        print(sol.trap(height))
+
+    if menu == 9:  # 15 https://leetcode.com/problems/3sum/
+        nums = [-1,0,1,2,-1,-4]
+
+        from c3_linear_data_structures.ch07.c9_1 import Solution
+        sol = Solution()
+        print(sol.threeSum(nums))
 
 
 if __name__ == '__main__':
-    main()
+    main_c3_linear_data_structures()
+    # main_c2_python()
